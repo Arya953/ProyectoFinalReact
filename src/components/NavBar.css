@@ -1,0 +1,36 @@
+.Nav {
+    background-color: #bbff68;
+    color: #ffffff;
+    padding: 15px 0;
+    text-align: center;
+  }
+
+.Nav h1 {
+    color: #000000;
+    padding: 10px;
+}
+  
+.Nav ul {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    display: inline-block;
+    flex-direction: row;
+  }
+
+.Nav li {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    display: inline-block;
+    flex-direction: row;
+}
+  
+.Nav li:hover {
+    background-color: #00d300;
+    border-color: #000000; 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
+  }
+  

@@ -1,0 +1,54 @@
+/* ItemList.css */
+
+.item-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas de igual tamaño */
+    gap: 20px; /* Espacio entre las columnas y las filas */
+    padding: 20px;
+  }
+  
+  .item {
+    text-align: center;
+  }
+  
+  .item img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .item h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .item button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .item button:hover {
+    background-color: #45a049;
+  }
+  
+  .item button:last-child {
+    background-color: #ff5722;
+  }
+  
+  .item button:last-child:hover {
+    background-color: #e64a19;
+  }
+  
+  .item-details {
+    margin-top: 10px;
+    font-size: 14px;
+  }

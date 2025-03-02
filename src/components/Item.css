@@ -1,0 +1,25 @@
+/* Item.css */
+
+/* Estilo general del contenedor de cada ítem */
+.item {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  #imagen {
+    width: 700px;  
+    height: 500px; 
+    object-fit: cover;  
+    border-radius: 10px; 
+  }
+  
+  #imagen:hover{
+        transform: scale(1.1); 
+  }
+
+  .item h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  

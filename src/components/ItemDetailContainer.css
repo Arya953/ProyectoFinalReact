@@ -1,0 +1,12 @@
+.item-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .item-detail-container .item-detail {
+    width: 80%;
+  }
+  
