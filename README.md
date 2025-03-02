@@ -1,12 +1,36 @@
-# React + Vite
+# Proyecto de Tienda Online de Personajes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación web que permite visualizar personajes, agregarlos al carrito, gestionar su cantidad y precio, y realizar pagos a través de un formulario. Utiliza **React.js**, **React Router**, **Context API** y **Fetch API** para interactuar con datos externos.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Visualización de personajes obtenidos desde una API.
+- Agregar personajes al carrito con control de stock.
+- Gestión de la cantidad de personajes en el carrito.
+- Redirección al Checkout Page para completar el pago.
+- Validación de pago con formulario (nombre, apellido y número de tarjeta).
+- Vaciar el carrito después de realizar el pago.
 
-## Expanding the ESLint configuration
+## Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React.js**: Para la creación de la interfaz de usuario.
+- **React Router**: Para la navegación entre las distintas páginas de la aplicación.
+- **Context API**: Para manejar el estado global del carrito de compras.
+- **Fetch API**: Para obtener los datos de personajes desde una API externa.
+- **Vercel**: Para el despliegue del proyecto en la web.
+
+## Estructura del Proyecto
+
+```bash
+src/
+├── components/
+│   ├── CartWidget.jsx         # Componente que muestra el carrito en el header
+│   ├── Item.jsx               # Componente para mostrar los personajes individuales
+│   └── ItemDetail.jsx         # Componente para mostrar detalles de un personaje
+├── context/
+│   └── CartContext.jsx        # Contexto para manejar el carrito y su estado
+├── pages/
+│   ├── CartPage.jsx           # Página del carrito de compras
+│   └── ItemDetailPage.jsx     # Página de detalles de un personaje
+├── App.jsx                    # Componente principal que maneja las rutas
+└── index.js                   # Punto de entrada del proyecto
