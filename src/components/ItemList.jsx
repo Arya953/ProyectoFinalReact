@@ -1,7 +1,7 @@
-// ItemList.jsx
+
 import React, { useState, useEffect } from 'react';
 import Item from './Item';
-import './ItemList.css'; // Asegúrate de tener el archivo CSS correspondiente
+import './ItemList.css';
 
 const ItemList = () => {
   const [characters, setCharacters] = useState([]);
@@ -11,7 +11,7 @@ const ItemList = () => {
     fetch("https://www.swapi.tech/api/people/")
       .then(response => response.json())
       .then(data => {
-        setCharacters(data.results); // Cargar personajes en el estado
+        setCharacters(data.results); 
         setLoading(false);
       })
       .catch(error => {
