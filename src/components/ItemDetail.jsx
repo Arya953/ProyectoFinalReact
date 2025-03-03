@@ -11,6 +11,7 @@ const ItemDetail = ({ item }) => {
       <p>Año de nacimiento: {item.birth_year}</p>
       <p>Color de cabello: {item.hair_color}</p>
       <p>Precio: ${item.price}</p>
+      <p>Stock: {item.stock}</p> 
     </div>
   );
 };
