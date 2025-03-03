@@ -1,9 +1,8 @@
-/* ItemList.css */
 
 .item-list {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columnas de igual tamaño */
-    gap: 20px; /* Espacio entre las columnas y las filas */
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 20px; 
     padding: 20px;
   }
   

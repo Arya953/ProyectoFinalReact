@@ -17,7 +17,7 @@ Este proyecto es una aplicación web que permite visualizar personajes, agregarl
 - **React Router**: Para la navegación entre las distintas páginas de la aplicación.
 - **Context API**: Para manejar el estado global del carrito de compras.
 - **Fetch API**: Para obtener los datos de personajes desde una API externa.
-- **Vercel**: Para el despliegue del proyecto en la web.
+- **Vercel**: Para el despliegue del proyecto en la web. (https://proyecto-final-react-osu1.vercel.app/)
 
 ## Estructura del Proyecto
 

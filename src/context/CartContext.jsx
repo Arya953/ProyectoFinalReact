@@ -15,7 +15,7 @@ export const CartProvider = ({ children }) => {
       const itemExists = prevCart.find((cartItem) => cartItem.id === item.id);
 
       if (itemExists) {
-        // Verificar si hay stock suficiente
+
         if (itemExists.quantity < item.stock) {
           return prevCart.map((cartItem) =>
             cartItem.id === item.id
@@ -27,12 +27,11 @@ export const CartProvider = ({ children }) => {
           return prevCart;
         }
       } else {
-        // Si el artículo no está en el carrito, agregarlo
+
         return [...prevCart, { ...item, quantity: 1 }];
       }
     });
 
-    // Actualizar el total del carrito
     setTotal((prevTotal) => prevTotal + item.price);
   };
 

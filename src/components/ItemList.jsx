@@ -7,22 +7,38 @@ const ItemList = () => {
   const [loading, setLoading] = useState(true);
   const [stock, setStock] = useState({});
 
+
+  const characterDetails = {
+    "1": { price: 100, stock: 5 }, 
+    "2": { price: 150, stock: 3 }, 
+    "3": { price: 200, stock: 2 }, 
+    "4": { price: 120, stock: 4 }, 
+    "5": { price: 180, stock: 10 }, 
+    "6": { price: 180, stock: 5}, 
+    "7": { price: 180, stock: 9 }, 
+    "8": { price: 180, stock: 3 }, 
+    "9": { price: 180, stock: 12 }, 
+    "10": { price: 180, stock: 16 }, 
+
+  };
+
   useEffect(() => {
     fetch("https://www.swapi.tech/api/people/")
       .then((response) => response.json())
       .then((data) => {
-        // Asignar un precio y stock inicial a cada personaje
-        const charactersWithPrice = data.results.map((character) => ({
+        const charactersWithDetails = data.results.map((character) => ({
           ...character,
-          price: Math.floor(Math.random() * 100) + 50, // Precio aleatorio entre 50 y 150
+          price: characterDetails[character.uid]?.price || 100, 
+          stock: characterDetails[character.uid]?.stock || 0, 
         }));
 
+
         const initialStock = {};
-        charactersWithPrice.forEach((character) => {
-          initialStock[character.uid] = 5; // Stock inicial de 5 unidades
+        charactersWithDetails.forEach((character) => {
+          initialStock[character.uid] = character.stock;
         });
 
-        setCharacters(charactersWithPrice);
+        setCharacters(charactersWithDetails);
         setStock(initialStock);
         setLoading(false);
       })
@@ -48,7 +64,7 @@ const ItemList = () => {
           key={character.uid}
           character={{
             ...character,
-            stock: stock[character.uid], // Pasar el stock actualizado
+            stock: stock[character.uid], 
           }}
           updateStock={updateStock}
         />

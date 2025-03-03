@@ -25,7 +25,6 @@ const Item = ({ character, updateStock }) => {
         stock: character.stock,
       });
 
-      // Actualizar el stock en el estado global
       updateStock(character.uid, character.stock - 1);
 
       setIsAdded(true);
